@@ -1,0 +1,38 @@
+@import "./utils.scss";
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.logo,
+.title {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.titleWrapper {
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-start;
+  // margin-bottom: 10px;
+  min-height: 34px;
+}
+.title {
+  font-size: 15px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 15px;
+}
+.tryFreeButton {
+  cursor: pointer;
+  margin-left: auto;
+  text-transform: uppercase;
+  padding: 7px 10px;
+  white-space: nowrap;
+  background-color: #ff595f;
+  box-shadow: 0 -2px 7px 0 rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  color: #fff;
+}

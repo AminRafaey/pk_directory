@@ -1,0 +1,28 @@
+@import "./utils.scss";
+
+.container {
+  margin: 0 auto;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #111111;
+}
+
+.main {
+  width: 100%;
+}
+
+.main {
+  overflow-y: auto;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: #282828;
+}
+
+.form label {
+  display: block;
+}

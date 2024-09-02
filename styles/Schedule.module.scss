@@ -1,0 +1,69 @@
+.navDay {
+  margin: 0;
+  padding: 10px 0 20px;
+  list-style: none;
+  display: flex;
+  color: #d8d8d8;
+  font-size: 12px;
+  justify-content: space-between;
+}
+.navItem {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &Active {
+    background-color: #fff;
+    border-radius: 100%;
+    color: #111;
+  }
+}
+.navDayName {
+  margin-left: 0.5px;
+}
+.day {
+  // must be padding due anchor links scroll
+  margin: 0;
+  padding: 30px 0 10px;
+  font-size: 32px;
+  text-align: left;
+}
+
+.item {
+  padding: 15px 0;
+  font-size: 12px;
+  align-items: center;
+  background-color: #3c3c3c;
+  border-radius: 4px;
+  margin-bottom: 8px;
+
+  &,
+  &Wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.eventName {
+  margin: 0 auto 4px;
+  font-weight: 600;
+}
+
+.time {
+  &::after {
+    margin: 10px auto 10px;
+    content: "";
+    display: block;
+    height: 4px;
+    width: 24px;
+    background-color: #ff595f;
+  }
+}
+
+.sundaySpaceGap {
+  min-height: 85vh;
+}

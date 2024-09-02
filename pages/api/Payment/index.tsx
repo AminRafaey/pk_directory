@@ -25,7 +25,7 @@ async function User(req: NextApiRequest, res: NextApiResponse) {
         currency,
         // Verify your integration in this guide by including this parameter
         metadata: { integration_check: "accept_a_payment" },
-        receipt_email: email,
+        receipt_email: email,  
       });
 
       res.json({ client_secret: paymentIntent.client_secret });

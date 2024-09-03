@@ -25,7 +25,6 @@ export async function getSchoolFull<F = SchoolTableData>(
     const [record] = await table
       .select({
         filterByFormula: `{Slug} = '${slug}'`,
-        maxRecords: 1500,
         //fields,
       })
       .all();
@@ -56,7 +55,6 @@ async function getSchoolSlugsFull(
       fields: [SchoolTableFields.SLUG],
       view: SchoolTableViews.ACTIVE_PAGES,
       filterByFormula,
-      maxRecords: 1500,
     })
     .all();
 
@@ -141,7 +139,6 @@ async function getAllSchool(filterByFormula: string = ""): Promise<any[]> {
     const records = await table
       .select({
         // fields: Object.values(SchoolTableFields),
-        maxRecords: 1500,
         view: SchoolTableViews.ACTIVE_PAGES,
         filterByFormula,
       })

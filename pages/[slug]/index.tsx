@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 import SchoolProfile from "src/modules/school-profile";
 import { LoadScript } from "@react-google-maps/api";
 import Header from "components/HeaderComponent";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticPaths, GetStaticProps } from "next";
 import { BASE_URL } from "services/config";
 import { NEXT_PUBLIC_GOOGLE_MAPS_KEY } from "airtable.config";
 import Head from "next/head";
@@ -107,7 +107,7 @@ const SchoolPage = ({
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { slug } = params;
   let finalNeighboringSchoolsData = null;
   try {
@@ -179,7 +179,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       };
     }
     return {
-      revalidate: oneHourFiftyMin,
+      // revalidate: oneHourFiftyMin,
       props: {
         notFound: false,
         searchFieldDataArray,

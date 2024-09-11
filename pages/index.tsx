@@ -3,7 +3,7 @@ import React from "react";
 import { styled } from "@mui/system";
 import Header from "components/HeaderComponent";
 import axios from "axios";
-import { GetStaticProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 import { BASE_URL } from "services/config";
 import { oneHourFiftyMin } from "src/shared/utils/revalidate";
 import Head from "next/head";
@@ -92,7 +92,7 @@ const Home = ({
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   
   try {
     const [
@@ -130,7 +130,7 @@ export const getStaticProps: GetStaticProps = async () => {
       };
     }
     return {
-      revalidate: oneHourFiftyMin,
+      // revalidate: oneHourFiftyMin,
       props: {
         notFound: false,
         homePageSearchFieldData,

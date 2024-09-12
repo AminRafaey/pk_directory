@@ -200,9 +200,9 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   }
 };
 
-export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => ({
-  paths: [],
-  fallback: "blocking",
-});
+// export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => ({
+//   paths: [],
+//   fallback: "blocking",
+// });
 
 export default SchoolPage;
